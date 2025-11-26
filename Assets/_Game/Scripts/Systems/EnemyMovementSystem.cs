@@ -10,7 +10,7 @@ public partial struct EnemyMovementSystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         float dt = SystemAPI.Time.DeltaTime;
-        float3 targetPos = float3.zero; // Eventually, set this to Player Position
+        float3 targetPos = new (0,1,0); // Eventually, set this to Player Position
 
         // Iterate over all entities that have Transform and EnemyStats
         foreach (var (transform, stats) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<EnemyStats>>())

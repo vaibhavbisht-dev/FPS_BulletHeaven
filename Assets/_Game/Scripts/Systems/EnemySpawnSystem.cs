@@ -60,7 +60,7 @@ public partial struct EnemySpawnSystem : ISystem
                 float x = math.cos(angle) * distance;
                 float z = math.sin(angle) * distance;
 
-                float3 spawnPos = playerPos + new float3(x, 0, z);
+                float3 spawnPos = playerPos + new float3(x, 1, z);
 
                 // Set Position
                 state.EntityManager.SetComponentData(newEnemy, LocalTransform.FromPosition(spawnPos));
