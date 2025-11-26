@@ -843,8 +843,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: FPS_BulletHeaven
-  metroPackageVersion: 
+  metroPackageName: FPSBulletHeaven
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -852,7 +852,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: FPS_BulletHeaven
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: FPS_BulletHeaven
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

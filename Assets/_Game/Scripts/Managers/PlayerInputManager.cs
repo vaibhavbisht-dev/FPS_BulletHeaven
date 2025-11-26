@@ -48,6 +48,7 @@ public class PlayerInputManager : MonoBehaviour
     private void Update()
     {
         MoveInput = moveAction.ReadValue<Vector2>();
+
         LookInput = lookAction.ReadValue<Vector2>();
 
         JumpTriggered = jumpAction.WasPerformedThisFrame();
