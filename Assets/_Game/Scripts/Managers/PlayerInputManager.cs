@@ -7,10 +7,12 @@ public class PlayerInputManager : MonoBehaviour
     public Vector2 LookInput { get; private set; }
     public bool JumpTriggered { get; private set; }
     public bool IsJumping { get; private set; }
+    public bool IsFiring { get; private set; }
 
     private InputAction moveAction;
     private InputAction lookAction;
     private InputAction jumpAction;
+    private InputAction firingAction;
 
     private void Awake()
     {
@@ -30,6 +32,9 @@ public class PlayerInputManager : MonoBehaviour
         jumpAction = new InputAction("Jump", binding: "<Gamepad>/buttonSouth");
         jumpAction.AddBinding("<Keyboard>/space");
 
+        firingAction = new InputAction("fire", binding: "<Gamepad>/rightTrigger");
+        firingAction.AddBinding("<Mouse>/leftButton");
+
     }
 
     private void OnEnable()
@@ -37,12 +42,14 @@ public class PlayerInputManager : MonoBehaviour
         moveAction.Enable();
         lookAction.Enable();
         jumpAction.Enable();
+        firingAction.Enable();
     }
     private void OnDisable()
     {
         moveAction.Disable();
         lookAction.Disable();
         jumpAction.Disable();
+        firingAction.Disable();
     }
 
     private void Update()
@@ -53,6 +60,7 @@ public class PlayerInputManager : MonoBehaviour
 
         JumpTriggered = jumpAction.WasPerformedThisFrame();
         IsJumping = jumpAction.IsPressed();
+        IsFiring = firingAction.IsPressed();
     }
 
 }
